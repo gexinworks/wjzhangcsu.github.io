@@ -13,7 +13,7 @@
   <entry>
     <title><![CDATA[my first blog]]></title>
     <url>%2F2019%2F01%2F05%2Fmy-first-blog%2F</url>
-    <content type="text"><![CDATA[hexo 使用https://www.cnblogs.com/fengxiongZz/p/7707219.html]]></content>
+    <content type="text"><![CDATA[hexo 使用 使用next主题 gitment 配置 busuanzi 配置，需要修改域名 百度统计配置 参考：https://www.cnblogs.com/fengxiongZz/p/7707219.html]]></content>
   </entry>
   <entry>
     <title><![CDATA[Hello World]]></title>
