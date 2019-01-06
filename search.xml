@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[hexo 部署使用]]></title>
     <url>%2F2019%2F01%2F05%2Fhexo%20%E9%83%A8%E7%BD%B2%E4%BD%BF%E7%94%A8%20%2F</url>
-    <content type="text"><![CDATA[hexo 使用 使用next主题 gitment 配置 busuanzi 配置，需要修改域名,一般只要在next的config中开启就好了 百度统计配置 参考：https://www.cnblogs.com/fengxiongZz/p/7707219.htmlhttp://www.cnblogs.com/ioufev/articles/9886560.htmlhttps://sun_xy.gitee.io/blog/]]></content>
+    <content type="text"><![CDATA[hexo 使用使用next主题gitment 配置busuanzi 配置，需要修改域名,一般只要在next的config中开启就好了百度统计配置参考：https://www.cnblogs.com/fengxiongZz/p/7707219.htmlhttp://www.cnblogs.com/ioufev/articles/9886560.htmlhttps://sun_xy.gitee.io/blog/]]></content>
       <categories>
         <category>hexo</category>
       </categories>
