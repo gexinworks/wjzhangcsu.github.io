@@ -6,21 +6,6 @@
     <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
   </entry>
   <entry>
-    <title><![CDATA[qqqqq]]></title>
-    <url>%2F2019%2F01%2F05%2Fqqqqq%2F</url>
-    <content type="text"></content>
-  </entry>
-  <entry>
-    <title><![CDATA[testetstt]]></title>
-    <url>%2F2019%2F01%2F05%2Ftestetstt%2F</url>
-    <content type="text"></content>
-  </entry>
-  <entry>
-    <title><![CDATA[testetst]]></title>
-    <url>%2F2019%2F01%2F05%2Ftestetst%2F</url>
-    <content type="text"></content>
-  </entry>
-  <entry>
     <title><![CDATA[my first blog]]></title>
     <url>%2F2019%2F01%2F05%2Fmy-first-blog%2F</url>
     <content type="text"><![CDATA[hexo 使用 使用next主题 gitment 配置 busuanzi 配置，需要修改域名 百度统计配置 参考：https://www.cnblogs.com/fengxiongZz/p/7707219.htmlhttp://www.cnblogs.com/ioufev/articles/9886560.htmlhttps://sun_xy.gitee.io/blog/]]></content>
