@@ -118,17 +118,17 @@
 
 
 
-<meta name="description" content="注意  ： –vm-driver=none 选项来在本机运行 Kubernetes 组件，这时候需要本机安装了 Docker。在使用 0.27版本之前的 none 驱动时，在执行 minikube delete 命令时，会移除 /data 目录，请注意，问题说明；另外 none 驱动会运行一个不安全的API Server，会导致安全隐患，不建议在个人工作环境安装。 1背景： 需要快速搭建一套集">
+<meta name="description" content="注意  ： –vm-driver=none 选项来在本机运行 Kubernetes 组件，这时候需要本机安装了 Docker。在使用 0.27版本之前的 none 驱动时，在执行 minikube delete 命令时，会移除 /data 目录，请注意，问题说明；另外 none 驱动会运行一个不安全的API Server，会导致安全隐患，不建议在个人工作环境安装。 1背景： 需要快速搭建一套集群">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Ubuntu 16.04 安装 minikube  (--vm-driver=none)">
 <meta property="og:url" content="https://wjzhangcsu.github.io/2019/01/07/Ubuntu-16-04-安装-minikube-vm-driver-none/index.html">
 <meta property="og:site_name" content="&amp;蚊子">
-<meta property="og:description" content="注意  ： –vm-driver=none 选项来在本机运行 Kubernetes 组件，这时候需要本机安装了 Docker。在使用 0.27版本之前的 none 驱动时，在执行 minikube delete 命令时，会移除 /data 目录，请注意，问题说明；另外 none 驱动会运行一个不安全的API Server，会导致安全隐患，不建议在个人工作环境安装。 1背景： 需要快速搭建一套集">
+<meta property="og:description" content="注意  ： –vm-driver=none 选项来在本机运行 Kubernetes 组件，这时候需要本机安装了 Docker。在使用 0.27版本之前的 none 驱动时，在执行 minikube delete 命令时，会移除 /data 目录，请注意，问题说明；另外 none 驱动会运行一个不安全的API Server，会导致安全隐患，不建议在个人工作环境安装。 1背景： 需要快速搭建一套集群">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-01-07T15:34:58.449Z">
+<meta property="og:updated_time" content="2019-01-07T16:08:38.021Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Ubuntu 16.04 安装 minikube  (--vm-driver=none)">
-<meta name="twitter:description" content="注意  ： –vm-driver=none 选项来在本机运行 Kubernetes 组件，这时候需要本机安装了 Docker。在使用 0.27版本之前的 none 驱动时，在执行 minikube delete 命令时，会移除 /data 目录，请注意，问题说明；另外 none 驱动会运行一个不安全的API Server，会导致安全隐患，不建议在个人工作环境安装。 1背景： 需要快速搭建一套集">
+<meta name="twitter:description" content="注意  ： –vm-driver=none 选项来在本机运行 Kubernetes 组件，这时候需要本机安装了 Docker。在使用 0.27版本之前的 none 驱动时，在执行 minikube delete 命令时，会移除 /data 目录，请注意，问题说明；另外 none 驱动会运行一个不安全的API Server，会导致安全隐患，不建议在个人工作环境安装。 1背景： 需要快速搭建一套集群">
 
 
 
@@ -414,22 +414,23 @@
       
 
       
-        <p> <strong> 注意 </strong> ： –vm-driver=none 选项来在本机运行 Kubernetes 组件，这时候需要本机安装了 Docker。在使用 0.27版本之前的 none 驱动时，在执行 minikube delete 命令时，会移除 /data 目录，请注意，问题说明；另外 none 驱动会运行一个不安全的API Server，会导致安全隐患，不建议在个人工作环境安装。</p>
+        <p><strong> 注意 </strong> ： –vm-driver=none 选项来在本机运行 Kubernetes 组件，这时候需要本机安装了 Docker。在使用 0.27版本之前的 none 驱动时，在执行 minikube delete 命令时，会移除 /data 目录，请注意，问题说明；另外 none 驱动会运行一个不安全的API Server，会导致安全隐患，不建议在个人工作环境安装。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">背景： 需要快速搭建一套集群环境，来进行某些功能的验证，在安装了多次 minikube 之后，发现不管是centos还是ubuntu安装virtualbox时都要折腾一番，所以尝试了 --vm-driver=none 选项 minikube 基本可以在几分钟内搭建完成，记录过程，为后来人填坑。</span><br></pre></td></tr></table></figure>
-<h2 id="安装-kubectl"><a href="#安装-kubectl" class="headerlink" title="安装 kubectl"></a>安装 kubectl</h2><h3 id="下载-kubectl-可执行文件（自备梯子）"><a href="#下载-kubectl-可执行文件（自备梯子）" class="headerlink" title="下载 kubectl 可执行文件（自备梯子）"></a>下载 kubectl 可执行文件（自备梯子）</h3><ul>
+<h2 id="安装-kubectl"><a href="#安装-kubectl" class="headerlink" title="安装 kubectl"></a>安装 kubectl</h2><h3 id="下载-kubectl-可执行文件"><a href="#下载-kubectl-可执行文件" class="headerlink" title="下载 kubectl 可执行文件"></a>下载 kubectl 可执行文件</h3><ul>
 <li><p>下载最新版 kubectl</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>指定版本下载 kubectl</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -LO https://storage.googleapis.com/kubernetes-release/release/v1.13.0/bin/linux/amd64/kubectl</span><br></pre></td></tr></table></figure>
 </li>
-</ul>
+<li><p>如果上述操作需翻墙而你有没有梯子的话，可以下载我下载好的kubectl<br><a href="https://raw.githubusercontent.com/wjzhangcsu/wjzhangcsu.github.io/master/upload/kubectl" target="_blank" rel="noopener">下载kubectl</a></p>
 <h3 id="增加可执行权限"><a href="#增加可执行权限" class="headerlink" title="增加可执行权限"></a>增加可执行权限</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chmod +x ./kubectl</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
 <h3 id="把-kubectl-加入到-usr-local-bin"><a href="#把-kubectl-加入到-usr-local-bin" class="headerlink" title="把 kubectl 加入到/usr/local/bin/"></a>把 kubectl 加入到/usr/local/bin/</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo mv ./kubectl /usr/<span class="built_in">local</span>/bin/kubectl</span><br></pre></td></tr></table></figure>
 <h2 id="安装docker"><a href="#安装docker" class="headerlink" title="安装docker"></a>安装docker</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt-get install docker.io</span><br></pre></td></tr></table></figure>
 <h2 id="安装minikube-使用阿里修改过的minikue-拉镜像不用翻墙，版本要是v0-25-2，尝试过高版本失败了"><a href="#安装minikube-使用阿里修改过的minikue-拉镜像不用翻墙，版本要是v0-25-2，尝试过高版本失败了" class="headerlink" title="安装minikube(使用阿里修改过的minikue,拉镜像不用翻墙，版本要是v0.25.2，尝试过高版本失败了)"></a>安装minikube(使用阿里修改过的minikue,拉镜像不用翻墙，版本要是v0.25.2，尝试过高版本失败了)</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -Lo minikube http://kubernetes.oss-cn-hangzhou.aliyuncs.com/minikube/releases/v0.25.2/minikube-linux-amd64 &amp;&amp; chmod +x minikube &amp;&amp; sudo cp minikube /usr/<span class="built_in">local</span>/bin/</span><br></pre></td></tr></table></figure>
 <h2 id="启动-minikube"><a href="#启动-minikube" class="headerlink" title="启动 minikube"></a>启动 minikube</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo minikube start --cpus=3 --memory=3500 --disk-size=<span class="string">"100G"</span> --vm-driver=none --registry-mirror=https://registry.docker-cn.com</span><br></pre></td></tr></table></figure>
-
       
     </div>
     
@@ -720,7 +721,7 @@ show_date_time();
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#安装-kubectl"><span class="nav-number">1.</span> <span class="nav-text">安装 kubectl</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#下载-kubectl-可执行文件（自备梯子）"><span class="nav-number">1.1.</span> <span class="nav-text">下载 kubectl 可执行文件（自备梯子）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#增加可执行权限"><span class="nav-number">1.2.</span> <span class="nav-text">增加可执行权限</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#把-kubectl-加入到-usr-local-bin"><span class="nav-number">1.3.</span> <span class="nav-text">把 kubectl 加入到/usr/local/bin/</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装docker"><span class="nav-number">2.</span> <span class="nav-text">安装docker</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装minikube-使用阿里修改过的minikue-拉镜像不用翻墙，版本要是v0-25-2，尝试过高版本失败了"><span class="nav-number">3.</span> <span class="nav-text">安装minikube(使用阿里修改过的minikue,拉镜像不用翻墙，版本要是v0.25.2，尝试过高版本失败了)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#启动-minikube"><span class="nav-number">4.</span> <span class="nav-text">启动 minikube</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#安装-kubectl"><span class="nav-number">1.</span> <span class="nav-text">安装 kubectl</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#下载-kubectl-可执行文件"><span class="nav-number">1.1.</span> <span class="nav-text">下载 kubectl 可执行文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#增加可执行权限"><span class="nav-number">1.2.</span> <span class="nav-text">增加可执行权限</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#把-kubectl-加入到-usr-local-bin"><span class="nav-number">1.3.</span> <span class="nav-text">把 kubectl 加入到/usr/local/bin/</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装docker"><span class="nav-number">2.</span> <span class="nav-text">安装docker</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装minikube-使用阿里修改过的minikue-拉镜像不用翻墙，版本要是v0-25-2，尝试过高版本失败了"><span class="nav-number">3.</span> <span class="nav-text">安装minikube(使用阿里修改过的minikue,拉镜像不用翻墙，版本要是v0.25.2，尝试过高版本失败了)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#启动-minikube"><span class="nav-number">4.</span> <span class="nav-text">启动 minikube</span></a></li></ol></div>
             
 
           </div>
@@ -754,7 +755,7 @@ show_date_time();
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">502</span>
+    <span title="Site words total count">528</span>
   
 </div>
 
