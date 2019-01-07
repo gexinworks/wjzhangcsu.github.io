@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Ubuntu 16.04 安装 minikube (--vm-driver=none)]]></title>
+    <url>%2F2019%2F01%2F07%2FUbuntu-16-04-%E5%AE%89%E8%A3%85-minikube-vm-driver-none%2F</url>
+    <content type="text"><![CDATA[注意 ： –vm-driver=none 选项来在本机运行 Kubernetes 组件，这时候需要本机安装了 Docker。在使用 0.27版本之前的 none 驱动时，在执行 minikube delete 命令时，会移除 /data 目录，请注意，问题说明；另外 none 驱动会运行一个不安全的API Server，会导致安全隐患，不建议在个人工作环境安装。 1背景： 需要快速搭建一套集群环境，来进行某些功能的验证，在安装了多次 minikube 之后，发现不管是centos还是ubuntu安装virtualbox时都要折腾一番，所以尝试了 --vm-driver=none 选项 minikube 基本可以在几分钟内搭建完成，记录过程，为后来人填坑。 安装 kubectl下载 kubectl 可执行文件（自备梯子） 下载最新版 kubectl 1curl -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl 指定版本下载 kubectl 1curl -LO https://storage.googleapis.com/kubernetes-release/release/v1.13.0/bin/linux/amd64/kubectl 增加可执行权限1chmod +x ./kubectl 把 kubectl 加入到/usr/local/bin/1sudo mv ./kubectl /usr/local/bin/kubectl 安装docker1apt-get install docker.io 安装minikube(使用阿里修改过的minikue,拉镜像不用翻墙，版本要是v0.25.2，尝试过高版本失败了)1curl -Lo minikube http://kubernetes.oss-cn-hangzhou.aliyuncs.com/minikube/releases/v0.25.2/minikube-linux-amd64 &amp;&amp; chmod +x minikube &amp;&amp; sudo cp minikube /usr/local/bin/ 启动 minikube1sudo minikube start --cpus=3 --memory=3500 --disk-size="100G" --vm-driver=none --registry-mirror=https://registry.docker-cn.com]]></content>
+  </entry>
+  <entry>
     <title><![CDATA[hexo的部署]]></title>
     <url>%2F2019%2F01%2F05%2Fhexo%20%E9%83%A8%E7%BD%B2%2F</url>
     <content type="text"><![CDATA[hexo 使用使用next主题gitment 配置busuanzi 配置，需要修改域名,一般只要在next的config中开启就好了百度统计配置参考：https://www.cnblogs.com/fengxiongZz/p/7707219.htmlhttp://www.cnblogs.com/ioufev/articles/9886560.htmlhttps://sun_xy.gitee.io/blog/]]></content>
